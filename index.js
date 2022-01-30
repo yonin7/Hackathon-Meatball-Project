@@ -11,11 +11,11 @@ app.use(express.static(publicDirectoryPath));
 app.use(cors());
 app.use(express.json());
 
-app.use('/search', route);
+app.use('/recpies/:lan/', route);
 
-app.get('/', (req, res) => {
-  res.send('hellow');
-});
+// app.get('/', (req, res) => {
+//   res.send('hellow');
+// });
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
