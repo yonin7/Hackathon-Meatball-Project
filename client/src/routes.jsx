@@ -1,14 +1,17 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Recipe from "./pages/Recipe";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Recipe from './pages/Recipe';
+import { RecipeProvider } from './providers/recipeData';
 
 function AppRoutes() {
   return (
-    <>
-      <Route path="/" element={<Home />} />
-      <Route path="/Recipe" element={<Recipe />} />
-    </>
+    <RecipeProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Recipe" element={<Recipe />} />
+      </Routes>
+    </RecipeProvider>
   );
 }
 

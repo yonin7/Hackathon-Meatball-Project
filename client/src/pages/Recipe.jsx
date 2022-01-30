@@ -1,21 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Container } from "../components/styles/Container.styled"
+import { Container } from '../components/styles/Container.styled';
 import myUrl from '../api/Api';
+import { useReciptContext } from '../providers/recipeData';
 
 const Recipe = () => {
-  const [recipeData, setRecipeData] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const { data } = await myUrl.get('/recipes');
-        setRecipeData(data);
-      } catch (e) {
-        setRecipeData([]);
-      }
-    }
-    getData();
-  }, []);
+  const recipeData = useReciptContext();
 
   return (
     <Container>
