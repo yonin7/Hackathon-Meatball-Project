@@ -125,7 +125,7 @@ input.checkbox {
 input.checkbox:checked {
   width: 30px;
   height: 30px;
-  right: -14%;
+  right: -22%;
   transform: translate(-50%, -60%);
 }
 input.checkbox:checked ~ .srch_sb_cnt {

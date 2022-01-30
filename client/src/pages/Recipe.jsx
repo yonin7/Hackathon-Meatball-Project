@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import Container from "../components/styles/Container.styled"
-// import myUrl from '../../api/Api';
+import { Container } from "../components/styles/Container.styled"
+import myUrl from '../api/Api';
 
 const Recipe = () => {
-  // const [recipeData, setRecipeData] = useState([]);
+  const [recipeData, setRecipeData] = useState([]);
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const { data } = await myUrl.get('/recipes');
-  //       setRecipeData(data);
-  //     } catch (e) {
-  //       setRecipeData([]);
-  //     }
-  //   }
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data } = await myUrl.get('/recipes');
+        setRecipeData(data);
+      } catch (e) {
+        setRecipeData([]);
+      }
+    }
+    getData();
+  }, []);
 
   return (
     <Container>
-      {/* <h2>{recipeData.name}title</h2>
+      <h2>{recipeData.name}title</h2>
       <p>{recipeData.description}description</p>
       <div>
         <img url={recipeData.image} alt={recipeData.name} />
@@ -30,7 +30,7 @@ const Recipe = () => {
         {recipeData.instructions.map((instruction) => (
           <li>{instruction}</li>
         ))}
-      </div> */}
+      </div>
     </Container>
   );
 };
