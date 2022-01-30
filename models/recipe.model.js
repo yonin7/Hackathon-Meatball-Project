@@ -1,5 +1,13 @@
 const { Schema, model } = require('mongoose');
-
+// {
+//   id: "",
+//   langs: [{ en:5 }, { fr: {} }]
+// }
+// const recipeSchema = new Schema({
+//   langs: {
+//     type: [],
+//   },
+// });
 const recipeSchema = new Schema({
   name: {
     type: String,
