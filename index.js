@@ -11,7 +11,7 @@ app.use(express.static(publicDirectoryPath));
 app.use(cors());
 app.use(express.json());
 
-app.use('/recpies/:lan/', route);
+app.use('/recpies/:lan', route);
 
 // app.get('/', (req, res) => {
 //   res.send('hellow');
