@@ -1,9 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Recpie from './pages/recpie';
+import React from "react";
+import { BrowserRouter, Routes } from "react-router-dom";
+import AppRoutes from "./routes";
+
+import GlobalStyles from "./components/styles/Global";
+import Header from "./components/Header";
+
 
 function App() {
-  return <div className="App">hello world</div>;
+  return (
+    <BrowserRouter>
+      <GlobalStyles />
+      <Header />
+      <Routes>{AppRoutes()}</Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
