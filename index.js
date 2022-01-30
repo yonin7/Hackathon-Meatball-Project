@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/search", route);
 
 app.get("/", (req, res) => {
-  res.send("hello from yevgeny");
+  res.send("hellow");
 });
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
