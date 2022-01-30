@@ -5,9 +5,9 @@ const cors = require('cors');
 const route = require('./routes');
 
 require('./db/mongoose');
-// const publicDirectoryPath = path.join(__dirname, 'client/build');
+const publicDirectoryPath = path.join(__dirname, 'client/build');
 
-// app.use(express.static(publicDirectoryPath));
+app.use(express.static(publicDirectoryPath));
 app.use(cors());
 app.use(express.json());
 
