@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from '../components/styles/Container.styled';
+import "./styles/Home.css";
+import ImageOverly from "../components/ImageOverlay/ImageOverlay";
 
-function Header() {
+function Home() {
 
   return (
-    <Container>
-      <h1>home page</h1>
-    </Container>
+    <ImageOverly />
   );
 }
 
-export default Header;
+export default Home;
