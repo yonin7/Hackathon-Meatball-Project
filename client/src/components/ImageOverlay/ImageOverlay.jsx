@@ -28,20 +28,12 @@ export default function ImageOverlay() {
       <div className="image-overlay">
         <img className="backward-image" src={img} alt="meatball" />
         <div className="text-on-img">
-          <h1>home page</h1>
+          <h2>Search Your Favorite Meatball</h2>
           <div className="srch_wrpr">
-            <input type="checkbox" name="" className="checkbox" />
+            <input type="checkbox" name="" class="checkbox" />
             <div className="srch_sb_cnt">
-              <input
-                onChange={handleInput}
-                value={inputVal}
-                type="text"
-                name="text_bar"
-                id=""
-                className="sech_txt_inpt"
-                placeholder="Type to search..."
-              />
-              <button type={'submit'} className="srch_btn">
+              <input type="text" name="text_bar" id="" className="sech_txt_inpt" placeholder="Type to search..." />
+              <button className="srch_btn">
                 <i className="fa fa-search" aria-hidden="true"></i>
               </button>
             </div>

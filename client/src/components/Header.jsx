@@ -14,7 +14,7 @@ function Header() {
     <header id="nav-wrapper">
       <nav id="nav">
         <div className="nav left">
-          <span className="gradient skew"><h1 className="logo un-skew"><Link to="/">Logo Here</Link></h1></span>
+          <span className="gradient skew"><h1 className="logo un-skew"><Link to="/">Happy Meat Ball</Link></h1></span>
           <button onClick={hamburgerToggle} id="menu" className="btn-nav"><span className="fas fa-bars"></span></button>
         </div>
         <div className={`nav right ${isVisible ? "display-none" : ""}`}>

@@ -42,6 +42,8 @@
   height: 70px;
   position: relative;
   z-index: 1;
+  width: 70%;
+  margin: 0 auto;
 }
 .srch_sb_cnt {
   width: 70px;
@@ -125,7 +127,7 @@ input.checkbox {
 input.checkbox:checked {
   width: 30px;
   height: 30px;
-  right: -22%;
+  right: -15%;
   transform: translate(-50%, -60%);
 }
 input.checkbox:checked ~ .srch_sb_cnt {
@@ -154,4 +156,14 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
   transition: all 0.6s cubic-bezier(0, 0.105, 0.035, 1.57);
   transition-delay: 0.5s;
   color: white;
+}
+
+@media (max-width: 600px) {
+  input.checkbox:checked {
+    right: -22%;
+  }
+
+  input.checkbox {
+    right: 22%;
+  }
 }
