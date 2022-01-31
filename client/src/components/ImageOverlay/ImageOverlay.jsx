@@ -3,10 +3,12 @@ import './style.css';
 import img from '../../images/the-fry-family-food-co-bSt5aUKiiL4-unsplash.jpg';
 import baseURL from '../../api/Api';
 import { useSetRecipeContext } from '../../providers/recipeData';
+import Card from '../Card/Card';
 
 export default function ImageOverlay() {
   const [inputVal, setInputVal] = useState('');
   const setRecipeData = useSetRecipeContext();
+  const [filteredRecepies, setFilteredRecepies] = useState([]);
 
   const handleInput = ({ target: { value } }) => {
     console.log(value);
@@ -19,8 +21,11 @@ export default function ImageOverlay() {
     console.log(newInputVal);
     const { data: recepies } = await baseURL.get(`/${newInputVal}`);
     console.log(recepies);
-    // if (!recepies.length) return;
-    // setRecipeData(recepies);
+    setFilteredRecepies(
+      recepies.map((recepie) => {
+        return <Card key={recepie._id} data={recepie} />;
+      })
+    );
   };
 
   return (
@@ -44,6 +49,7 @@ export default function ImageOverlay() {
                 <i className="fa fa-search" aria-hidden="true"></i>
               </button>
             </div>
+            <div> {filteredRecepies}</div>
           </div>
         </div>
       </div>
