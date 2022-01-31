@@ -9,12 +9,15 @@ export default function ImageOverlay() {
   const setRecipeData = useSetRecipeContext();
 
   const handleInput = ({ target: { value } }) => {
+    console.log(value);
     setInputVal(value);
   };
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    const { data: recepies } = await baseURL.get(`/${inputVal}`);
+    const newInputVal = inputVal.split(' ').join('%20');
+    console.log(newInputVal);
+    const { data: recepies } = await baseURL.get(`/${newInputVal}`);
     console.log(recepies);
     // if (!recepies.length) return;
     // setRecipeData(recepies);
@@ -27,15 +30,11 @@ export default function ImageOverlay() {
         <div className="text-on-img">
           <h1>home page</h1>
           <div className="srch_wrpr">
-            <input
-              onChange={handleInput}
-              value={inputVal}
-              type="checkbox"
-              name=""
-              className="checkbox"
-            />
+            <input type="checkbox" name="" className="checkbox" />
             <div className="srch_sb_cnt">
               <input
+                onChange={handleInput}
+                value={inputVal}
                 type="text"
                 name="text_bar"
                 id=""
