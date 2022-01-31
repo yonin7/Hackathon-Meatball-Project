@@ -11,15 +11,15 @@ const addRecipe = async (req, res) => {
   }
 };
 
-const getRecipes = async (req, res) => {
-  try {
-    const recipes = await Recipe.find({});
-    // logger.info(`${req.user.name} ask for recier ${recipes}`); - if we will do users.
-    res.send(recipes);
-  } catch (e) {
-    res.status(400).send(e.message);
-  }
-};
+// const getRecipes = async (req, res) => {
+//   try {
+//     const recipes = await Recipe.find();
+//     // logger.info(`${req.user.name} ask for recier ${recipes}`); - if we will do users.
+//     res.send(recipes);
+//   } catch (e) {
+//     res.status(400).send(e.message);
+//   }
+// };
 const getRecipe = async (req, res) => {
   console.log(req.params.id);
 
@@ -37,7 +37,7 @@ const getRecipe = async (req, res) => {
 };
 
 module.exports = {
-  getRecipes,
+  // getRecipes,
   getRecipe,
   addRecipe,
 };

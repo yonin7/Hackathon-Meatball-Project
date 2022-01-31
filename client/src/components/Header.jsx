@@ -15,10 +15,12 @@ function Header() {
         <div className="nav left">
           <span className="gradient skew">
             <h1 className="logo un-skew">
-              <Link to="/">Logo Here</Link>
+              <Link to="/">Happy Meat Ball</Link>
             </h1>
           </span>
-          {/* <button onClick={hamburgerToggle} id="menu" className="btn-nav"><span className="fas fa-bars"></span></button> */}
+          <button onClick={hamburgerToggle} id="menu" className="btn-nav">
+            <span className="fas fa-bars"></span>
+          </button>
         </div>
         <div className={`nav right ${isVisible ? 'display-none' : ''}`}>
           <Link to="/" className="nav-link active">

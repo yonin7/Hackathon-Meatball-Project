@@ -1,0 +1,27 @@
+.recipe-wrapper {
+  margin-top: 50px;
+  text-align: center;
+  h2 {
+    font-size: 44px;
+  }
+
+  h4 {
+    font-size: 31px;
+  }
+
+  p,
+  li {
+    font-size: 24px;
+  }
+}
+
+.recipe-heading {
+  width: 100%;
+  background-color: rgb(224, 223, 223);
+  height: 20vh;
+  padding: 20px;
+}
+
+.recipe-description {
+  text-align: left;
+}

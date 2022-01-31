@@ -10,10 +10,12 @@ const recipeController = require('../controllers/recipe.controller');
 
 router
   .get('/', (req, res) => {
+    console.log(req);
     //get all recipes
-    recipeController.getRecipes(req, res);
+    recipeController.getRecipe(req, res);
   })
   .get('/:id', (req, res) => {
+    // console.log(req.params);
     //get specific recipe
     recipeController.getRecipe(req, res);
   })
