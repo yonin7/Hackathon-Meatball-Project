@@ -8,13 +8,13 @@ export default function ImageOverlay() {
     <div className="image-overlay">
       <img className="backward-image" src={img} alt="meatball" />
       <div className="text-on-img">
-        <h1>home page</h1>
-        <div class="srch_wrpr">
+        <h2>Search Your Favorite Meatball</h2>
+        <div className="srch_wrpr">
           <input type="checkbox" name="" class="checkbox" />
-          <div class="srch_sb_cnt">
-            <input type="text" name="text_bar" id="" class="sech_txt_inpt" placeholder="Type to search..." />
-            <button class="srch_btn">
-              <i class="fa fa-search" aria-hidden="true"></i>
+          <div className="srch_sb_cnt">
+            <input type="text" name="text_bar" id="" className="sech_txt_inpt" placeholder="Type to search..." />
+            <button className="srch_btn">
+              <i className="fa fa-search" aria-hidden="true"></i>
             </button>
           </div>
         </div>
