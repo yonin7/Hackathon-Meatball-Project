@@ -1,7 +1,7 @@
 const Recipe = require('../models/recipe.model');
 
 const addRecipe = async (req, res) => {
-  const recipe = new Recipe(req.body);
+  const recipe = await new Recipe(req.body);
   try {
     await recipe.save();
     res.status(201).send(recipe);
@@ -22,8 +22,11 @@ const getRecipes = async (req, res) => {
 };
 const getRecipe = async (req, res) => {
   console.log(req.params.id);
+
   try {
-    const recipe = await Recipe.find({ name: req.params.id });
+    const recipe = await Recipe.find({
+      title: { $regex: req.params.id.split('').reverse().join('') },
+    });
     if (!recipe) {
       return res.status(400).send({ error: 'Cannot find recipe' });
     }

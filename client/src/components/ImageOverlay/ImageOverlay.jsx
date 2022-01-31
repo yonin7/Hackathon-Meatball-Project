@@ -28,7 +28,7 @@ export default function ImageOverlay() {
       <div className="image-overlay">
         <img className="backward-image" src={img} alt="meatball" />
         <div className="text-on-img">
-          <h1>home page</h1>
+          <h1 className="title">Meatball Recipes</h1>
           <div className="srch_wrpr">
             <input type="checkbox" name="" className="checkbox" />
             <div className="srch_sb_cnt">

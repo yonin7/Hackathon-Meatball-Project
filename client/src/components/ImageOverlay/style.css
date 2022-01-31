@@ -155,3 +155,7 @@ input.checkbox:checked ~ .srch_sb_cnt .srch_btn:after {
   transition-delay: 0.5s;
   color: white;
 }
+
+.title {
+  padding-bottom: 10rem;
+}
